@@ -17,7 +17,8 @@ public abstract class BaseUnitType: MonoBehaviour
     public float movementSpeed;
     public int cost;
     public Vector3 direction;
-
+    public bool isMoving;
+    public Rigidbody2D rb;
     public BaseUnitType(int health, float movementSpeed, int cost, Vector3 direction)
     {
         this.health = health;
@@ -26,13 +27,26 @@ public abstract class BaseUnitType: MonoBehaviour
         this.direction = direction;
     }
 
-    private void Update()
+    public IEnumerator Move()
     {
-        Move();
+        yield return new WaitForFixedUpdate();
+        if (isMoving)
+            rb.velocity = direction * movementSpeed;
+        else
+            rb.velocity = Vector3.zero;
+        StartCoroutine(Move());
     }
-
-    public void Move()
+    public void StartMove()
     {
-        transform.position = Vector2.Lerp(transform.position, transform.position + direction, Time.deltaTime * movementSpeed);
+        isMoving = true;
+        StartCoroutine(Move());
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("WayPoint"))
+        {
+            print(1);
+            direction = collision.GetComponent<WayPoint>().GetDirection();
+        }
     }
 }

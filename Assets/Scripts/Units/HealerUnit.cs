@@ -9,12 +9,6 @@ public class HealerUnit : BaseUnitType
     {
     }
 
-    private void Update()
-    {
-        Move();
-        Heal();
-    }
-
     public void Heal()
     {
         print(direction);
