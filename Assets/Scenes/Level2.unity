@@ -2956,6 +2956,34 @@ PrefabInstance:
       propertyPath: arrowInstantiatePoint
       value: 
       objectReference: {fileID: 1518864565}
+    - target: {fileID: 6213758460985613749, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
+      propertyPath: arrowList.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213758460985613749, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
+      propertyPath: arrowList.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213758460985613749, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
+      propertyPath: arrowList.Array.data[7]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213758460985613749, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
+      propertyPath: arrowList.Array.data[9]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213758460985613749, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
+      propertyPath: arrowList.Array.data[11]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213758460985613749, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
+      propertyPath: arrowList.Array.data[19]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213758460985613749, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
+      propertyPath: arrowList.Array.data[21]
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
 --- !u!1001 &1855908140

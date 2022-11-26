@@ -1634,6 +1634,30 @@ PrefabInstance:
       propertyPath: arrowInstantiatePoint
       value: 
       objectReference: {fileID: 1440254407}
+    - target: {fileID: 6213758460985613749, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
+      propertyPath: arrowList.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213758460985613749, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
+      propertyPath: arrowList.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213758460985613749, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
+      propertyPath: arrowList.Array.data[7]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213758460985613749, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
+      propertyPath: arrowList.Array.data[9]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213758460985613749, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
+      propertyPath: arrowList.Array.data[15]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213758460985613749, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
+      propertyPath: arrowList.Array.data[17]
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e05f59d490ac92e4abbf6eb5399ebcf2, type: 3}
 --- !u!1 &627397608
@@ -4264,7 +4288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8704087542898045962, guid: 977c2ff549dbc534eb67254a6c1f0bf7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.49
+      value: -2.34
       objectReference: {fileID: 0}
     - target: {fileID: 8704087542898045962, guid: 977c2ff549dbc534eb67254a6c1f0bf7, type: 3}
       propertyPath: m_LocalPosition.z

@@ -37,5 +37,6 @@ public class StackObjects : MonoBehaviour
         preparationManager.currentIndex--;
         preparationManager.currentCost -= cost;
         preparationManager.ChangeCostText();
+        Destroy(gameObject);
     }
 }

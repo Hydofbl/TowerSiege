@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 85663a1d7a4dcbc4f8aab9254562956e, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 664fa52c31accd34daa249f6985b1887, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.17247897, y: 0.18900001}
   m_AnchorMax: {x: 0.82800007, y: 0.81135446}
-  m_AnchoredPosition: {x: -0.29629707, y: 0.113861084}
+  m_AnchoredPosition: {x: -0.29629517, y: 0.113861084}
   m_SizeDelta: {x: -2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &32734667
@@ -1089,7 +1089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.072000004, y: 0.072516315}
   m_AnchorMax: {x: 0.92800003, y: 0.9274837}
-  m_AnchoredPosition: {x: 0.0049972534, y: -0.2519951}
+  m_AnchoredPosition: {x: 0.0049972534, y: -0.25199127}
   m_SizeDelta: {x: 0.08747101, y: 0.72317505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &286739990
@@ -2524,7 +2524,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.82
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

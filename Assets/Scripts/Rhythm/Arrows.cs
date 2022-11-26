@@ -17,17 +17,11 @@ public class Arrows : MonoBehaviour
     public AudioClip wrongClip;
     public ArrowManager arrowManager;
 
-    // Start is called before the first frame update
     void Start()
     {
         arrowManager = FindObjectOfType<ArrowManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     public void InstantiateVisuals()
     {
         currentLength = arrowType.Length;
@@ -119,7 +113,9 @@ public class Arrows : MonoBehaviour
             {
                 GameObject musicGO = Instantiate(musicSource, transform.position, Quaternion.identity);
                 musicGO.GetComponent<AudioSource>().clip = soundClips[int.Parse(arrowType[i].ToString())];
-                musicGO.GetComponent<AudioSource>().Play();
+
+                if(PlayerPrefs.GetInt("sfx") == 1)
+                    musicGO.GetComponent<AudioSource>().Play();
                 Destroy(musicGO, 2);
             }
             arrowManager.Correct();
@@ -131,7 +127,9 @@ public class Arrows : MonoBehaviour
         arrowManager.Wrong();
         GameObject musicGO = Instantiate(musicSource, transform.position, Quaternion.identity);
         musicGO.GetComponent<AudioSource>().clip = wrongClip;
-        musicGO.GetComponent<AudioSource>().Play();
+
+        if (PlayerPrefs.GetInt("sfx") == 1)
+            musicGO.GetComponent<AudioSource>().Play();
         Destroy(musicGO, 2);
         if (isDestroy)
         {
