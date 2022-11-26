@@ -23,6 +23,7 @@ public abstract class BaseUnitType: MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public SpriteRenderer healthFiller;
     public float currentHealth;
+    public ArrowManager arrowManager;
     public BaseUnitType(int health, float movementSpeed, int cost, Vector3 direction)
     {
         this.health = health;
@@ -33,20 +34,33 @@ public abstract class BaseUnitType: MonoBehaviour
     private void Start()
     {
         currentHealth = health;
+        arrowManager = FindObjectOfType<ArrowManager>();
     }
     public IEnumerator Move()
     {
         yield return new WaitForFixedUpdate();
         if (isMoving)
-            rb.velocity = direction * movementSpeed;
+        {
+            if(!arrowManager)
+                arrowManager = FindObjectOfType<ArrowManager>();
+
+            rb.velocity = direction * arrowManager.currentSpeed;
+            StartCoroutine(Move());
+        }
         else
             rb.velocity = Vector3.zero;
-        StartCoroutine(Move());
     }
     public void StartMove()
     {
-        isMoving = true;
-        StartCoroutine(Move());
+        if (!isMoving)
+        {
+            isMoving = true;
+            StartCoroutine(Move());
+        }
+    }
+    public void StopMove()
+    {
+        isMoving = false;
     }
     public void Flip(bool value)
     {

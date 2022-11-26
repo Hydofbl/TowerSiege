@@ -19,12 +19,10 @@ public class HealerUnit : BaseUnitType
     public IEnumerator Heal()
     {
         var hitColliders = Physics2D.OverlapCircleAll(transform.position, healRange);
-        Debug.Log("enter", gameObject);
         foreach (var hitCollider in hitColliders)
         {
             if (hitCollider.CompareTag("Unit"))
             {
-        Debug.Log(hitCollider.name, hitCollider.gameObject);
 
                 hitCollider.GetComponent<BaseUnitType>().ChangeHealth(healAmount);
             }

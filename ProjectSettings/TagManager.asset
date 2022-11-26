@@ -8,6 +8,9 @@ TagManager:
   - Unit
   - StartPoint
   - SlowerArea
+  - Activator
+  - ArrowParent
+  - HitArea
   layers:
   - Default
   - TransparentFX
