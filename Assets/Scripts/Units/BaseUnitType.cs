@@ -24,6 +24,7 @@ public abstract class BaseUnitType: MonoBehaviour
     public SpriteRenderer healthFiller;
     public float currentHealth;
     public ArrowManager arrowManager;
+    public Animator animator;
     public BaseUnitType(int health, float movementSpeed, int cost, Vector3 direction)
     {
         this.health = health;
@@ -55,12 +56,18 @@ public abstract class BaseUnitType: MonoBehaviour
         if (!isMoving)
         {
             isMoving = true;
+            animator.enabled = true;
+
             StartCoroutine(Move());
         }
     }
     public void StopMove()
     {
-        isMoving = false;
+        if (isMoving)
+        {
+            isMoving = false;
+            animator.enabled = false;
+        }
     }
     public void Flip(bool value)
     {

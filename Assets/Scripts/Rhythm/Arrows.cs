@@ -16,7 +16,7 @@ public class Arrows : MonoBehaviour
     public AudioClip[] soundClips;
     public AudioClip wrongClip;
     public ArrowManager arrowManager;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,7 @@ public class Arrows : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void InstantiateVisuals()
     {
@@ -34,7 +34,7 @@ public class Arrows : MonoBehaviour
         for (int i = 0; i < arrowType.Length; i++)
         {
             Instantiate(arrows[int.Parse(arrowType[i].ToString())], transform);
-            switch(int.Parse(arrowType[i].ToString()))
+            switch (int.Parse(arrowType[i].ToString()))
             {
                 case 0:
                     isUp = true;
@@ -53,9 +53,9 @@ public class Arrows : MonoBehaviour
     }
     public void CheckArrow(KeyCode keyCode)
     {
-        if(keyCode==KeyCode.UpArrow)
+        if (keyCode == KeyCode.UpArrow)
         {
-            if(isUp==true)
+            if (isUp == true)
             {
                 isUp = false;
                 CorrectArrow();
@@ -106,32 +106,34 @@ public class Arrows : MonoBehaviour
     {
         if (collision.CompareTag("HitArea"))
         {
-            if (currentLength>0)
-            WrongArrow(false);
+            if (currentLength > 0)
+                WrongArrow(false);
         }
     }
     public void CorrectArrow()
     {
         currentLength--;
-        if(currentLength==0)
+        if (currentLength == 0)
         {
-            for(int i =0;i<arrowType.Length;i++)
+            for (int i = 0; i < arrowType.Length; i++)
             {
-                GameObject musicGO= Instantiate(musicSource, transform.position, Quaternion.identity);
+                GameObject musicGO = Instantiate(musicSource, transform.position, Quaternion.identity);
                 musicGO.GetComponent<AudioSource>().clip = soundClips[int.Parse(arrowType[i].ToString())];
                 musicGO.GetComponent<AudioSource>().Play();
+                Destroy(musicGO, 2);
             }
-                arrowManager.Correct();
+            arrowManager.Correct();
             Destroy(gameObject);
         }
     }
     public void WrongArrow(bool isDestroy)
     {
-                arrowManager.Wrong();
+        arrowManager.Wrong();
         GameObject musicGO = Instantiate(musicSource, transform.position, Quaternion.identity);
         musicGO.GetComponent<AudioSource>().clip = wrongClip;
         musicGO.GetComponent<AudioSource>().Play();
-        if(isDestroy)
+        Destroy(musicGO, 2);
+        if (isDestroy)
         {
             foreach (SpriteRenderer spriteRenderer in GetComponentsInChildren<SpriteRenderer>())
                 spriteRenderer.enabled = false;

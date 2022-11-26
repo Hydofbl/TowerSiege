@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 4f36aed0e7f50db499d8659c84481083, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6238cf01cd3bf0f40b8fc3a4d11c46c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,14 +117,15 @@ MonoBehaviour:
   attackPower: 100
   range: 1
   circleCollider2D: {fileID: 8704087542898045960}
-  bulletPrefab: {fileID: 3786996632940807942, guid: dc96225b2771dc64db39827f0bf04b1a, type: 3}
+  bulletPrefab: {fileID: 3786996632940807942, guid: a15b8936c2037d542b27b18d48689ebb, type: 3}
   bulletInstantiatePoint: {fileID: 8704087543653443104}
   units: []
   isFiring: 0
   canAttack: 1
+  currentAttackSpeed: 0
+  slowerUnits: []
   attackLimit: 15
   currentAttackIndex: 0
-  slowerUnits: []
 --- !u!1 &8704087543653443104
 GameObject:
   m_ObjectHideFlags: 0

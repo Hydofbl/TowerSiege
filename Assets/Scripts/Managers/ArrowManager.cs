@@ -16,7 +16,7 @@ public class ArrowManager : MonoBehaviour
     void Start()
     {
         int index = 0;
-        for(int i =0;i<arrowList.Length;i++)
+        for (int i = 0; i < arrowList.Length; i++)
         {
             GameObject arrowGO = Instantiate(arrowParentPrefab, arrowInstantiatePoint.transform);
             arrowGO.transform.position += offset * index;
@@ -31,26 +31,22 @@ public class ArrowManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void Correct()
     {
-        print("correct");
-            currentSpeed = movementSpeed+movementSpeedCorrectMultiplier*comboIndex;
+        currentSpeed = movementSpeed + movementSpeedCorrectMultiplier * comboIndex;
         foreach (BaseUnitType baseUnitType in FindObjectsOfType<BaseUnitType>())
         {
             baseUnitType.StartMove();
         }
-        print("correctaaa");
         comboIndex++;
-        print(comboIndex);
     }
     public void Wrong()
     {
-        print("wrong");
-            currentSpeed = 0;
+        currentSpeed = 0;
         comboIndex = 0;
-        foreach(BaseUnitType baseUnitType in FindObjectsOfType<BaseUnitType>())
+        foreach (BaseUnitType baseUnitType in FindObjectsOfType<BaseUnitType>())
         {
             baseUnitType.StopMove();
         }

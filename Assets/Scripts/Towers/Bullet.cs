@@ -20,7 +20,11 @@ public class Bullet : MonoBehaviour
         if(targetObject!=null)
         {
             transform.position = Vector3.Lerp(transform.position, targetObject.transform.position, Time.deltaTime * moveSpeed);
-            if(Vector3.Distance(transform.position,targetObject.transform.position)<killDistance)
+            Vector3 dir = targetObject.transform.position - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            //transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z);
+            if (Vector3.Distance(transform.position,targetObject.transform.position)<killDistance)
             {
                 targetObject.GetComponent<BaseUnitType>().ChangeHealth(-bulletPower);
                 Destroy(gameObject);

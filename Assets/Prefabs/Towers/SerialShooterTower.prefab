@@ -117,7 +117,7 @@ MonoBehaviour:
   attackPower: 40
   range: 1
   circleCollider2D: {fileID: 6000671278309030022}
-  bulletPrefab: {fileID: 3786996632940807942, guid: dc96225b2771dc64db39827f0bf04b1a, type: 3}
+  bulletPrefab: {fileID: 3786996632940807942, guid: 492f84f70e12e354d8bea156c831851c, type: 3}
   bulletInstantiatePoint: {fileID: 6000671278627105454}
   units: []
   isFiring: 0
