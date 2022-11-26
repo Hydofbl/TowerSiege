@@ -67,14 +67,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowList:
   - 0
-  - 1
-  - 12
-  - 31
   - 2
-  - 23
+  - 0
+  - 2
+  - 0
+  - 2
+  - 0
+  - 2
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
   arrowInstantiatePoint: {fileID: 0}
   arrowParentPrefab: {fileID: 793167450700311843, guid: 14ad82d88d504a446a812684528db929, type: 3}
-  offset: {x: 1.5, y: 0, z: 0}
+  offset: {x: 1.27, y: 0, z: 0}
   movementSpeed: 1
   movementSpeedCorrectMultiplier: 0
   comboIndex: 0
