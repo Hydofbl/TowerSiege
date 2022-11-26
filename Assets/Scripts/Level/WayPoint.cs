@@ -18,7 +18,7 @@ public class WayPoint : MonoBehaviour
     {
         
     }
-    public Vector3 GetDirection()
+    public Vector3 GetDirection(BaseUnitType baseUnitType)
     {
         if(direction==Direction.down)
         {
@@ -30,10 +30,12 @@ public class WayPoint : MonoBehaviour
         }
         else if (direction == Direction.right)
         {
+            baseUnitType.Flip(false);
             return new Vector3(1, 0, 0);
         }
         else if (direction == Direction.left)
         {
+            baseUnitType.Flip(true);
             return new Vector3(-1, 0, 0);
         }
         return Vector3.zero;

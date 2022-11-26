@@ -10,6 +10,14 @@ public class UnitManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        float targetaspect = 16.0f / 9.0f;
+        float windowaspect = (float)Screen.height / (float)Screen.width;
+        float scalefactor;
+        if (windowaspect >= targetaspect)
+        {
+            scalefactor = windowaspect / targetaspect;
+            Camera.main.orthographicSize = Camera.main.orthographicSize * scalefactor;
+        }
         int index = 0;
         foreach(BaseUnitType baseUnit in unitsThatSpawn)
         {
