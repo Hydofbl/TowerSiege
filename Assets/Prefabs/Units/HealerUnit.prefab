@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  health: 100
+  health: 160
   movementSpeed: 1
   cost: 2
   direction: {x: 1, y: 0, z: 0}
@@ -111,8 +111,8 @@ MonoBehaviour:
   healthFiller: {fileID: 164427971506345815}
   currentHealth: 0
   healRange: 2
-  healAmount: 10
-  healTime: 0.5
+  healAmount: 25
+  healTime: 2
 --- !u!50 &-2413582105895461919
 Rigidbody2D:
   serializedVersion: 4
