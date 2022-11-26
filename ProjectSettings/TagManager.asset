@@ -6,6 +6,8 @@ TagManager:
   tags:
   - WayPoint
   - Unit
+  - StartPoint
+  - SlowerArea
   layers:
   - Default
   - TransparentFX

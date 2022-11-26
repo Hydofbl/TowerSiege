@@ -19,6 +19,7 @@ public abstract class BaseUnitType: MonoBehaviour
     public Vector3 direction;
     public bool isMoving;
     public Rigidbody2D rb;
+    public BoxCollider2D boxCollider2D;
     public SpriteRenderer spriteRenderer;
     public SpriteRenderer healthFiller;
     public float currentHealth;
@@ -55,7 +56,6 @@ public abstract class BaseUnitType: MonoBehaviour
     {
         if (collision.CompareTag("WayPoint"))
         {
-            print(1);
             direction = collision.GetComponent<WayPoint>().GetDirection(this);
         }
     }
@@ -64,6 +64,11 @@ public abstract class BaseUnitType: MonoBehaviour
         if(currentHealth+value<=0)
         {
             Destroy(gameObject);
+        }
+        else if(currentHealth+value>health)
+        {
+            currentHealth = health;
+            healthFiller.size = new Vector2((float)(currentHealth / health) * 4.1f, 1);
         }
         else {
             currentHealth += value;
