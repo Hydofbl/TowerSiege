@@ -31,6 +31,7 @@ public class StartButton : MonoBehaviour, IPointerDownHandler
         PlayerPrefs.SetInt("fromMenu", 0);
         yield return new WaitForSeconds(0);
         FindObjectOfType<DropDown>().StartContinueToNextScene();
+        if(_mainMenu)
         _mainMenu.CloseAll();
     }
 }

@@ -22,6 +22,7 @@ public class DropDown : MonoBehaviour
     }
     public IEnumerator GetNextScene()
     {
+        Time.timeScale = 1;
         UIManager.Instance.StartTransition();
         yield return new WaitForSeconds(transitionTime);
         sceneIdx = PlayerPrefs.GetInt("Level", 0);

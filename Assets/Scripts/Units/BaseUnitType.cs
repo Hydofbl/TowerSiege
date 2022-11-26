@@ -84,6 +84,7 @@ public abstract class BaseUnitType: MonoBehaviour
     {
         if(currentHealth+value<=0)
         {
+            FindObjectOfType<ScoreManager>().DecreaseUnitCount();
             Destroy(gameObject);
         }
         else if(currentHealth+value>health)

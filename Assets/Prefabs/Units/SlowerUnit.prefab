@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3559290901395360866}
   - component: {fileID: 13625342683672660}
   m_Layer: 0
-  m_Name: EngineerUnit
+  m_Name: SlowerUnit
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

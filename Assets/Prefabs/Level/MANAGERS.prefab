@@ -12,6 +12,10 @@ GameObject:
   - component: {fileID: 6213758460985613738}
   - component: {fileID: 6213758460985613749}
   - component: {fileID: -2039066661959917029}
+  - component: {fileID: -599929079679716639}
+  - component: {fileID: -4753997611584146125}
+  - component: {fileID: 1442462711144629785}
+  - component: {fileID: 2581344780337682962}
   m_Layer: 0
   m_Name: MANAGERS
   m_TagString: Untagged
@@ -40,22 +44,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6213758460985613736}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a4b89ec6e238e045ab2bbcba6123694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitsThatSpawn:
-  - {fileID: 6323560087537526221, guid: 40af5b7e0bca41b42a3a804b6b654442, type: 3}
-  - {fileID: 6323560087537526221, guid: 40af5b7e0bca41b42a3a804b6b654442, type: 3}
-  - {fileID: 2857750095790039528, guid: 185c89decb337e0449009bc43c55bc29, type: 3}
-  - {fileID: 2857750095790039528, guid: 185c89decb337e0449009bc43c55bc29, type: 3}
-  - {fileID: 409954449165279086, guid: 2878e955d3fafc248be3b4d0bf09f32d, type: 3}
-  - {fileID: 409954449165279086, guid: 2878e955d3fafc248be3b4d0bf09f32d, type: 3}
-  - {fileID: 6323560087537526221, guid: 40af5b7e0bca41b42a3a804b6b654442, type: 3}
-  - {fileID: 6323560087537526221, guid: 40af5b7e0bca41b42a3a804b6b654442, type: 3}
+  unitsThatSpawn: []
   unitSpawnPoint: {fileID: 0}
   offset: {x: -1, y: 0, z: 0}
+  scoreManager: {fileID: 0}
 --- !u!114 &6213758460985613749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,7 +60,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6213758460985613736}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa8b8a8b177ad324ba299a88abef0746, type: 3}
   m_Name: 
@@ -79,7 +76,7 @@ MonoBehaviour:
   arrowParentPrefab: {fileID: 793167450700311843, guid: 14ad82d88d504a446a812684528db929, type: 3}
   offset: {x: 1.5, y: 0, z: 0}
   movementSpeed: 1
-  movementSpeedCorrectMultiplier: 0.1
+  movementSpeedCorrectMultiplier: 0
   comboIndex: 0
   currentSpeed: 0
 --- !u!82 &-2039066661959917029
@@ -178,3 +175,84 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-599929079679716639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213758460985613736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0bf86b30ea39b04e8afba728423c719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackScreen: {fileID: 0}
+  levelEndImage: {fileID: 0}
+  restartButton: {fileID: 0}
+  nextLevelButton: {fileID: 0}
+  targetScoreText: {fileID: 0}
+  yourScoreText: {fileID: 0}
+  scoreManager: {fileID: 0}
+--- !u!114 &-4753997611584146125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213758460985613736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb9a571821cdcc47868e7254da65ddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIdx: 0
+  scenes:
+  - MainMenu
+  - Level1
+  - Level2
+  - Level3
+  - Level4
+  - Level5
+  transitionTime: 1
+--- !u!114 &1442462711144629785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213758460985613736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df0cc39f501c967448625f75051e965d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisLevelCost: 6
+  thisLevelTargetUnitScore: 2
+  currentCost: 0
+  costText: {fileID: 0}
+  stackStartPoint: {fileID: 0}
+  currentIndex: 0
+  stackElements:
+  - {fileID: 3944508918465451507, guid: 4fabb701c7925784c91f7132e2daae82, type: 3}
+  - {fileID: 111935834243342805, guid: bee263f0b0988bf4287fe1197249b724, type: 3}
+  - {fileID: 2996480589218899980, guid: fc31d2af0255eb84d8e98dcbe852a48e, type: 3}
+  offset: {x: 0.5, y: 0, z: 0}
+--- !u!114 &2581344780337682962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213758460985613736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32b587461758d84289a8f37fd39fabc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScore: 0
+  currentScore: 0
+  targetScoreText: {fileID: 0}
+  currentScoreText: {fileID: 0}
+  preparationManager: {fileID: 0}
+  unitCount: 0

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class UnitManager : MonoBehaviour
 {
-    public BaseUnitType[] unitsThatSpawn;
+    public List<BaseUnitType> unitsThatSpawn= new List<BaseUnitType>();
     public GameObject unitSpawnPoint;
     public Vector3 offset;
+    public ScoreManager scoreManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,18 +19,25 @@ public class UnitManager : MonoBehaviour
             scalefactor = windowaspect / targetaspect;
             Camera.main.orthographicSize = Camera.main.orthographicSize * scalefactor;
         }
-        int index = 0;
-        foreach(BaseUnitType baseUnit in unitsThatSpawn)
-        {
-            BaseUnitType instantiatedUnit =  Instantiate(unitsThatSpawn[index], unitSpawnPoint.transform.position+(offset*index), Quaternion.identity);
-            index++;
-            instantiatedUnit.StartMove();
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public void SpawnUnits()
+    {
+        int index = 0;
+        scoreManager = GetComponent<ScoreManager>();
+
+        foreach (BaseUnitType baseUnit in unitsThatSpawn)
+        {
+            BaseUnitType instantiatedUnit = Instantiate(unitsThatSpawn[index], unitSpawnPoint.transform.position + (offset * index), Quaternion.identity);
+            index++;
+            instantiatedUnit.StartMove();
+            scoreManager.unitCount++;
+        }
     }
 }
