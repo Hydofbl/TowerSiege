@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  health: 100
+  health: 150
   movementSpeed: 1
   cost: 1
   direction: {x: 1, y: 0, z: 0}
