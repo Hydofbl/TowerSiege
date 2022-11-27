@@ -61,7 +61,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 664d59603146300448aefa2594ec4d9a, type: 3}
   - {fileID: 8300000, guid: bbf777bb9e5aca24f89ab6e963ad27c3, type: 3}
   - {fileID: 8300000, guid: 3dca1f29943947d43a0177116cdd4bdc, type: 3}
-  wrongClip: {fileID: 8300000, guid: 3dca1f29943947d43a0177116cdd4bdc, type: 3}
+  wrongClip: {fileID: 8300000, guid: dcce5525836af9544a0cd51d42500d15, type: 3}
   arrowManager: {fileID: 0}
 --- !u!61 &5484327151566261577
 BoxCollider2D:

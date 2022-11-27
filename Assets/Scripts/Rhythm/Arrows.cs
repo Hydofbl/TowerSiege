@@ -114,8 +114,7 @@ public class Arrows : MonoBehaviour
                 GameObject musicGO = Instantiate(musicSource, transform.position, Quaternion.identity);
                 musicGO.GetComponent<AudioSource>().clip = soundClips[int.Parse(arrowType[i].ToString())];
 
-                if(PlayerPrefs.GetInt("sfx") == 1)
-                    musicGO.GetComponent<AudioSource>().Play();
+                musicGO.GetComponent<AudioSource>().Play();
                 Destroy(musicGO, 2);
             }
             arrowManager.Correct();
@@ -128,8 +127,7 @@ public class Arrows : MonoBehaviour
         GameObject musicGO = Instantiate(musicSource, transform.position, Quaternion.identity);
         musicGO.GetComponent<AudioSource>().clip = wrongClip;
 
-        if (PlayerPrefs.GetInt("sfx") == 1)
-            musicGO.GetComponent<AudioSource>().Play();
+        musicGO.GetComponent<AudioSource>().Play();
         Destroy(musicGO, 2);
         if (isDestroy)
         {
