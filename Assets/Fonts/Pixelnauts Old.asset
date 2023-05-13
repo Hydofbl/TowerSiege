@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Pixelnauts SDF Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: GLOW_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FaceTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 435bf714587fea34887eb8d1e9249722, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -51,10 +51,10 @@ Material:
     - _ColorMask: 15
     - _CullMode: 0
     - _Diffuse: 0.5
-    - _FaceDilate: 0
+    - _FaceDilate: -0.16
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
-    - _GlowInner: 0.2
+    - _GlowInner: 0.4
     - _GlowOffset: 1
     - _GlowOuter: 0.3
     - _GlowPower: 1
@@ -69,8 +69,8 @@ Material:
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.8333333
-    - _ScaleRatioB: 0.5208334
-    - _ScaleRatioC: 0.6770833
+    - _ScaleRatioB: 0.62339747
+    - _ScaleRatioC: 0.8104167
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -160,11 +160,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Pixelnauts SDF
+  m_Name: Pixelnauts Old
   m_EditorClassIdentifier: 
-  hashCode: 47119588
+  hashCode: 47140338
   material: {fileID: -6876302275281727580}
-  materialHashCode: 717185988
+  materialHashCode: 1084531986
   m_Version: 1.1.0
   m_SourceFontFileGUID: 416767b5bbdb3e24e8f385bece614050
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 416767b5bbdb3e24e8f385bece614050, type: 3}
